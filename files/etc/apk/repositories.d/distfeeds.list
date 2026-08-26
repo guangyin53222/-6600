@@ -1,0 +1,7 @@
+# 由 fix_repos.sh 生成 (nju)
+https://mirror.nju.edu.cn/immortalwrt/snapshots/targets/qualcommax/ipq60xx/packages/packages.adb
+https://mirror.nju.edu.cn/immortalwrt/snapshots/packages/aarch64_cortex-a53/base/packages.adb
+https://mirror.nju.edu.cn/immortalwrt/snapshots/packages/aarch64_cortex-a53/luci/packages.adb
+https://mirror.nju.edu.cn/immortalwrt/snapshots/packages/aarch64_cortex-a53/packages/packages.adb
+https://mirror.nju.edu.cn/immortalwrt/snapshots/packages/aarch64_cortex-a53/routing/packages.adb
+https://mirror.nju.edu.cn/immortalwrt/snapshots/packages/aarch64_cortex-a53/telephony/packages.adb
