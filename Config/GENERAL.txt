@@ -23,7 +23,6 @@ CONFIG_PACKAGE_curl=y
 # ==================== Harbor File ====================
 CONFIG_PACKAGE_luci-app-harbor-file=y
 CONFIG_PACKAGE_luci-i18n-harbor-file-zh-cn=y
-
 CONFIG_PACKAGE_luci-app-zerotier=y
 
 # ===== Docker (IPQ60XX eMMC) =====
@@ -57,9 +56,24 @@ CONFIG_PACKAGE_ucode-mod-fs=y
 CONFIG_PACKAGE_ucode-mod-ubus=y
 CONFIG_PACKAGE_ucode-mod-uci=y
 CONFIG_PACKAGE_ucode-mod-struct=y
-
 CONFIG_PACKAGE_luci-theme-argon=y
-
+# ===== USB 硬盘文件系统驱动补齐 =====
+# 1) exFAT：配合已开的 exfat-fsck / exfat-mkfs
+CONFIG_PACKAGE_kmod-fs-exfat=y
+# 2) NTFS：推荐 ntfs3 内核驱动；ntfs-3g 为 fuse 用户态备用（二选一，也可都开）
+CONFIG_PACKAGE_kmod-fs-ntfs3=y
+# CONFIG_PACKAGE_ntfs-3g=y
+# 3) ext4
+CONFIG_PACKAGE_kmod-fs-ext4=y
+CONFIG_PACKAGE_e2fsprogs=y
+# 4) FAT32 / FAT16 + 编码
+CONFIG_PACKAGE_kmod-fs-vfat=y
+CONFIG_PACKAGE_kmod-fs-msdos=y
+CONFIG_PACKAGE_kmod-nls-cp437=y
+CONFIG_PACKAGE_kmod-nls-iso8859-1=y
+CONFIG_PACKAGE_kmod-nls-utf8=y
+# 5) btrfs 工具（驱动已开，需格式化/修复时加）
+CONFIG_PACKAGE_btrfs-progs=y
 #删除插件
 CONFIG_PACKAGE_luci-app-attendedsysupgrade=n
 CONFIG_PACKAGE_luci-app-wol=n
