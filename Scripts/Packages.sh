@@ -88,8 +88,8 @@ echo "      EXTRA PACKAGES INSTALL START      "
 echo "========================================"
 # iStore
 UPDATE_PACKAGE "luci-app-store" "linkease/istore" "main" "" "store"
-# OpenAppFilter（锁定 v6.1.8）
-UPDATE_PACKAGE "OpenAppFilter" "destan19/OpenAppFilter" "v6.1.8" "" "luci-app-appfilter oaf open-app-filter"
+# OpenAppFilter（不再锁定版本，跟随默认分支）
+UPDATE_PACKAGE "OpenAppFilter" "destan19/OpenAppFilter" "master" "" "luci-app-appfilter oaf open-app-filter"
 # Harbor File
 UPDATE_PACKAGE "harbor-file" "destan19/luci-app-harbor-file" "main" "" "luci-app-harbor-file"
 echo "========================================"
