@@ -164,13 +164,6 @@ config rule
 	option target 'ACCEPT'
 
 config rule
-	option name 'Allow-LAN-All'
-	option src 'lan'
-	option dest '*'
-	option proto 'all'
-	option target 'ACCEPT'
-
-config rule
 	option name 'Allow-ZeroTier-9993'
 	option src '*'
 	option proto 'udp'
@@ -203,6 +196,7 @@ config include 'zerotier_forward'
 	option position 'chain-pre'
 	option chain 'forward'
 
+# NSS‑ECM 开启，不再注释
 config include 'qcanssecm'
 	option type 'script'
 	option path '/etc/firewall.d/qca-nss-ecm'
