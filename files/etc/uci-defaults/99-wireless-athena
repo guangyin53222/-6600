@@ -3,13 +3,15 @@
 
 set +e
 
-# ========= radio0：5.8G =========
+# ========= radio0：5.8G 80M =========
 uci set wireless.radio0.disabled='0'
 uci set wireless.radio0.band='5g'
 uci set wireless.radio0.channel='157'
 uci set wireless.radio0.htmode='HE80'
-uci set wireless.radio0.country='US'
+uci set wireless.radio0.country='CN'
 uci set wireless.radio0.cell_density='0'
+uci set wireless.radio0.txpower='23'
+uci set wireless.radio0.nss='1'
 
 uci set wireless.default_radio0.ssid='OpenWRT-5G'
 uci set wireless.default_radio0.encryption='psk2+ccmp'
@@ -20,10 +22,11 @@ uci set wireless.default_radio0.disabled='0'
 uci set wireless.radio1.disabled='0'
 uci set wireless.radio1.band='2g'
 uci set wireless.radio1.channel='6'
-uci set wireless.radio1.htmode='HE40'
-uci set wireless.radio1.country='US'
+uci set wireless.radio1.htmode='HE20'
+uci set wireless.radio1.country='CN'
 uci set wireless.radio1.cell_density='0'
 uci set wireless.radio1.noscan='1'
+uci set wireless.radio1.txpower='20'
 
 uci set wireless.default_radio1.ssid='OpenWRT'
 uci set wireless.default_radio1.encryption='psk2+ccmp'
@@ -33,10 +36,12 @@ uci set wireless.default_radio1.disabled='0'
 # ========= radio2：5.2G 160M =========
 uci set wireless.radio2.disabled='0'
 uci set wireless.radio2.band='5g'
-uci set wireless.radio2.channel='40'
+uci set wireless.radio2.channel='36'
 uci set wireless.radio2.htmode='HE160'
-uci set wireless.radio2.country='US'
+uci set wireless.radio2.country='CN'
 uci set wireless.radio2.cell_density='0'
+uci set wireless.radio2.txpower='23'
+uci set wireless.radio2.nss='1'
 
 uci set wireless.default_radio2.ssid='OpenWRT-5G+'
 uci set wireless.default_radio2.encryption='psk2+ccmp'
@@ -44,8 +49,6 @@ uci set wireless.default_radio2.key='12345678'
 uci set wireless.default_radio2.disabled='0'
 
 uci commit wireless
-
-# 防止 Settings.sh 或 set-wireless.sh 回写
-touch /etc/.wireless_locked
+wifi reload
 
 exit 0
