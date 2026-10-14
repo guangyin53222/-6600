@@ -83,10 +83,35 @@ UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 UPDATE_PACKAGE "timecontrol" "sirpdboy/luci-app-timecontrol" "main"
 UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "axonhub gecoosac sing-box luci-app-homeproxy luci-app-timewol luci-app-wolplus luci-app-wolultra"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
+# ===================== 京东云雅典娜 LED（锁 v2.4.0 / a0eae21） =====================
+echo "============================================"
+echo " Adding JDC-AX6600 Athena LED Controller v2.4.0"
+echo "============================================"
 
-# ===================== 京东云雅典娜 LED（锁定 v2.4.0） =====================
-UPDATE_PACKAGE "athena-led" "unraveloop/JDC-AX6600-Athena-LED-Controller" "v2.4.0" "pkg" "athena-led luci-app-athena-led JDC-AX6600-Athena-LED-Controller"
-UPDATE_PACKAGE "luci-app-athena-led" "unraveloop/JDC-AX6600-Athena-LED-Controller" "v2.4.0" "pkg" "athena-led luci-app-athena-led JDC-AX6600-Athena-LED-Controller"
+ATHENA_TMP="/tmp/athena-led-src"
+rm -rf "$ATHENA_TMP"
+
+git clone --depth=1 https://github.com/unraveloop/JDC-AX6600-Athena-LED-Controller.git "$ATHENA_TMP"
+
+git -C "$ATHENA_TMP" fetch --depth=1 origin "refs/tags/v2.4.0:refs/tags/v2.4.0"
+git -C "$ATHENA_TMP" checkout -q "a0eae21dc1119a56aaf8633c610af03a92f7493c"
+
+rm -rf package/athena-led package/luci-app-athena-led
+find package -maxdepth 2 -type d -iname "*athena-led*" ! -path "*/emortal/*" -exec rm -rf {} + 2>/dev/null
+
+cp -rf "$ATHENA_TMP/athena-led" package/
+cp -rf "$ATHENA_TMP/luci-app-athena-led" package/
+
+find package/feeds -maxdepth 2 -type l -iname "*athena-led*" -delete 2>/dev/null
+
+if [ -f package/athena-led/Makefile ] && [ -f package/luci-app-athena-led/Makefile ]; then
+    echo "✅ athena-led:      $(grep '^PKG_VERSION' package/athena-led/Makefile | head -1)"
+    echo "✅ luci-app-athena-led: $(grep '^PKG_VERSION' package/luci-app-athena-led/Makefile | head -1)"
+else
+    echo "❌ athena-led packages missing!"
+    exit 1
+fi
+echo "============================================"
 
 # ========== 第三方扩展插件 ==========
 echo "========================================"
