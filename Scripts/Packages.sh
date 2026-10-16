@@ -47,20 +47,6 @@ UPDATE_PACKAGE() {
 	fi
 }
 
-# ===================== Athena LED (unraveloop) =====================
-# 删掉 VIKINGYFY 自带的旧包，再拉 unraveloop 双包
-echo " "
-echo "=== Athena LED: remove old & install unraveloop ==="
-find ../feeds/luci/ ../feeds/packages/ ./package/ -maxdepth 5 -type d \
-  \( -iname 'luci-app-athena-led' -o -iname 'athena-led' \) \
-  -exec rm -rf {} + 2>/dev/null
-echo "Old athena-led packages removed."
-echo " "
-
-# 拉后端 athena-led
-UPDATE_PACKAGE "athena-led" "unraveloop/JDC-AX6600-Athena-LED-Controller" "main" "pkg"
-# 拉前端 luci-app-athena-led
-UPDATE_PACKAGE "luci-app-athena-led" "unraveloop/JDC-AX6600-Athena-LED-Controller" "main" "pkg"
 
 # ===================== 主题 =====================
 UPDATE_PACKAGE "argon" "sbwml/luci-theme-argon" "openwrt-25.12"
