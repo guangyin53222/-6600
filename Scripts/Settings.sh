@@ -62,3 +62,27 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
 		echo "qualcommax set up nowifi successfully!"
 	fi
 fi
+
+# ===================== Athena LED 替换为 unraveloop =====================
+OLD_ATHENA=$(find ./package ./feeds/luci ./feeds/packages -maxdepth 5 -type d \
+  \( -iname 'luci-app-athena-led' -o -iname 'athena-led' \) 2>/dev/null)
+if [ -n "$OLD_ATHENA" ]; then
+	echo "$OLD_ATHENA" | while read -r D; do
+		rm -rf "$D"
+		echo "Athena LED: removed old $D"
+	done
+fi
+
+ATHENA_MK="./target/linux/qualcommax/ipq60xx.mk"
+if [ -f "$ATHENA_MK" ]; then
+	sed -i 's|package/emortal/luci-app-athena-led||g' "$ATHENA_MK"
+	sed -i 's|\.\./\.\./package/emortal/luci-app-athena-led||g' "$ATHENA_MK"
+	if ! grep -q 'athena-led luci-app-athena-led' "$ATHENA_MK"; then
+		sed -i '/define Device\/jdcloud_re-cs-02/,/endef/ s/DEVICE_PACKAGES +=/DEVICE_PACKAGES += athena-led luci-app-athena-led luci-i18n-athena-led-zh-cn/' "$ATHENA_MK"
+	fi
+	echo "Athena LED: device packages updated in $ATHENA_MK"
+fi
+
+echo "CONFIG_PACKAGE_athena-led=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-app-athena-led=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-i18n-athena-led-zh-cn=y" >> ./.config
