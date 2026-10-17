@@ -1,0 +1,545 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+# ==================================
+# 标题与状态 (v2.5.0 全量刷新, 与 settings.js 同步)
+# ==================================
+msgid "Athena LED Controller"
+msgstr "雅典娜 LED 控制器"
+
+msgid "JDCloud AX6600 LED matrix controller — dual GPIO backend, alerts, MQTT, automation."
+msgstr "京东云 AX6600 点阵屏控制器 — 双 GPIO 后端 / 告警 / MQTT / 自动化。"
+
+msgid "Running Status"
+msgstr "运行状态"
+
+msgid "Collecting data..."
+msgstr "正在收集数据..."
+
+msgid "RUNNING"
+msgstr "运行中"
+
+msgid "NOT RUNNING"
+msgstr "未运行"
+
+msgid "Command failed with code %d"
+msgstr "命令执行失败, 返回码 %d"
+
+msgid "Service action \"%s\" executed."
+msgstr "服务操作「%s」已执行。"
+
+# ==================================
+# 屏幕预览
+# ==================================
+msgid "Screen Preview"
+msgstr "屏幕预览"
+
+msgid "Simulates the 27×5 LED matrix. Supports digits, A-Z and symbols; unsupported characters are skipped (same as hardware)."
+msgstr "模拟 27×5 点阵屏效果。支持数字、字母和符号；不支持的字符会被跳过 (与真实硬件行为一致)。"
+
+msgid "Type text to preview..."
+msgstr "输入要预览的文本..."
+
+# ==================================
+# 显示模块
+# ==================================
+msgid "🕒 Time & Date"
+msgstr "🕒 时间与日期"
+
+msgid "⛅ Local Weather"
+msgstr "⛅ 当地天气"
+
+msgid "💻 CPU Load"
+msgstr "💻 CPU 占用"
+
+msgid "💾 RAM Usage"
+msgstr "💾 内存占用"
+
+msgid "⚙️ System Load"
+msgstr "⚙️ 系统负载"
+
+msgid "🌡️ Single Temp"
+msgstr "🌡️ 单体温度"
+
+msgid "⏱️ System Uptime"
+msgstr "⏱️ 运行时间"
+
+msgid "🚀 Realtime Speed (UL/DL)"
+msgstr "🚀 实时网速 (上/下同显)"
+
+msgid "⬇️ Download Speed"
+msgstr "⬇️ 下载速度"
+
+msgid "⬆️ Upload Speed"
+msgstr "⬆️ 上传速度"
+
+msgid "🌐 Total Traffic (DL/UL split)"
+msgstr "🌐 累计流量 (下/上分列)"
+
+msgid "📥 Total Downloaded"
+msgstr "📥 累计下载"
+
+msgid "📤 Total Uploaded"
+msgstr "📤 累计上传"
+
+msgid "📊 Total Traffic (DL+UL)"
+msgstr "📊 累计总流量 (下+上)"
+
+msgid "🔌 NIC Status"
+msgstr "🔌 网口状态"
+
+msgid "🌍 WAN IP"
+msgstr "🌍 公网 IP"
+
+msgid "📱 Online Devices"
+msgstr "📱 在线设备数"
+
+msgid "📝 Custom Text"
+msgstr "📝 自定义文本"
+
+msgid "🔗 HTTP API"
+msgstr "🔗 HTTP 接口"
+
+msgid "📈 Stock Trend"
+msgstr "📈 股票行情"
+
+msgid "📆 Countdown (D-Day)"
+msgstr "📆 倒数日"
+
+msgid "🛰️ Network Latency"
+msgstr "🛰️ 网络延迟"
+
+msgid "🔗 Connection Count"
+msgstr "🔗 连接数"
+
+msgid "🏮 Lunar Date"
+msgstr "🏮 农历日期"
+
+msgid "🌅 Sunrise / Sunset"
+msgstr "🌅 日出日落"
+
+msgid "📨 MQTT Message"
+msgstr "📨 MQTT 消息"
+
+msgid "🎬 Animation (.bin)"
+msgstr "🎬 动画播放 (.bin)"
+
+# ==================================
+# 模块参数 (按模块联动)
+# ==================================
+msgid "Time Format"
+msgstr "时间格式"
+
+msgid "⌚ Blink colon (Default)"
+msgstr "⌚ 冒号闪烁 (默认)"
+
+msgid "⌚ HH:MM:SS"
+msgstr "⌚ 时:分:秒"
+
+msgid "⌚ Static HH:MM"
+msgstr "⌚ 静态 时:分"
+
+msgid "📅 MM-DD"
+msgstr "📅 月-日"
+
+msgid "📅 YY-MM-DD"
+msgstr "📅 年-月-日 (两位年)"
+
+msgid "📅 YYYY.MM.DD"
+msgstr "📅 年.月.日 (四位年)"
+
+msgid "🗓️ Week & Time (Cycle)"
+msgstr "🗓️ 星期与时间轮显"
+
+msgid "🗓️ Day of Week"
+msgstr "🗓️ 仅星期"
+
+msgid "Sensor"
+msgstr "传感器"
+
+msgid "🌡️ CPU"
+msgstr "🌡️ CPU"
+
+msgid "🌡️ NSS-Top"
+msgstr "🌡️ NSS-Top"
+
+msgid "🌡️ NSS"
+msgstr "🌡️ NSS"
+
+msgid "🌡️ Wi-Fi PHY0"
+msgstr "🌡️ Wi-Fi PHY0"
+
+msgid "🌡️ Wi-Fi PHY1"
+msgstr "🌡️ Wi-Fi PHY1"
+
+msgid "🌡️ LPASS"
+msgstr "🌡️ LPASS"
+
+msgid "🌡️ DDR"
+msgstr "🌡️ 内存颗粒"
+
+msgid "Interface"
+msgstr "网络接口"
+
+msgid "Animation File"
+msgstr "动画文件"
+
+msgid "Target Date"
+msgstr "目标日期"
+
+msgid "One-off: 2027-06-07"
+msgstr "一次性: 2027-06-07"
+
+msgid "Yearly: every Jan 1st"
+msgstr "每年循环: 每年 1 月 1 日"
+
+msgid "YYYY-MM-DD for a one-off date, MM-DD to repeat every year."
+msgstr "填 YYYY-MM-DD 为一次性日期, 填 MM-DD 则每年循环。"
+
+msgid "Ping Target"
+msgstr "延迟探测目标"
+
+msgid "host[:port], measured via TCP connect. Empty = AliDNS."
+msgstr "主机[:端口], 通过 TCP 连接耗时测量。留空 = 阿里 DNS。"
+
+msgid "Coordinates"
+msgstr "经纬度坐标"
+
+msgid "empty = auto (IP geolocation)"
+msgstr "留空 = 自动 (IP 定位)"
+
+msgid "Beijing"
+msgstr "北京"
+
+msgid "Shanghai"
+msgstr "上海"
+
+msgid "Guangzhou"
+msgstr "广州"
+
+msgid "\"lat,lon\" or leave empty for IP-based location."
+msgstr "填「纬度,经度」, 或留空使用 IP 自动定位。"
+
+# ==================================
+# 基础设置
+# ==================================
+msgid "General Settings"
+msgstr "基础设置"
+
+msgid "Enabled"
+msgstr "启用"
+
+msgid "Brightness Level"
+msgstr "屏幕亮度"
+
+msgid "Night Brightness"
+msgstr "夜间亮度"
+
+msgid "Automatically dim the screen during the configured period (screen stays on)."
+msgstr "在设定时段内自动降低亮度 (屏幕保持点亮)。"
+
+msgid "Night Brightness Level"
+msgstr "夜间亮度等级"
+
+msgid "Dim Start Time"
+msgstr "降亮开始时间"
+
+msgid "Dim End Time"
+msgstr "降亮结束时间"
+
+msgid "HH:MM format, supports crossing midnight."
+msgstr "时:分 格式, 支持跨午夜。"
+
+msgid "Physical Button GPIO"
+msgstr "物理按键 GPIO"
+
+msgid "TLMM pin offset of the physical screen button. Default is 71 for JDCloud AX6600. Run \"find_button\" in SSH to detect if unsure."
+msgstr "屏幕物理按键的 TLMM 引脚偏移。京东云 AX6600 默认为 71。不确定时可在 SSH 中运行 find_button 探测。"
+
+msgid "GPIO Backend"
+msgstr "GPIO 后端"
+
+msgid "Auto (cdev first, sysfs fallback)"
+msgstr "自动 (优先字符设备, 失败回退 sysfs)"
+
+msgid "Character device (/dev/gpiochipN)"
+msgstr "字符设备 (/dev/gpiochipN)"
+
+msgid "Legacy sysfs"
+msgstr "传统 sysfs"
+
+msgid "Keep \"auto\" unless the screen stays dark."
+msgstr "保持「自动」即可, 除非屏幕始终不亮再手动调整。"
+
+msgid "GPIO Base Address"
+msgstr "GPIO 基址"
+
+msgid "Auto Detect (Recommended)"
+msgstr "自动探测 (推荐)"
+
+msgid "Base number of the main gpiochip, used by the sysfs backend only. Check with: ls /sys/class/gpio/"
+msgstr "主控 gpiochip 的基址编号, 仅 sysfs 后端使用。可用 ls /sys/class/gpio/ 查看。"
+
+msgid "Button & Profile Mode"
+msgstr "按键与频道模式"
+
+msgid "Single Profile (Button skips to next module)"
+msgstr "单频道模式 (按键跳至下一模块)"
+
+msgid "Multi Profile (Button switches to next channel)"
+msgstr "多频道模式 (按键切换至下一频道)"
+
+msgid "Single Profile: all modules loop continuously, button skips current module. Multi Profile: modules are grouped into channels, button switches channels."
+msgstr "单频道模式: 所有模块循环轮播, 按键跳过当前模块。多频道模式: 模块分组到不同频道, 按键在频道间切换 (双击回到频道 1)。"
+
+# ==================================
+# 频道布局表格
+# ==================================
+msgid "Single Profile Layout"
+msgstr "单频道布局"
+
+msgid "Used ONLY when Single Profile mode is selected. Drag to reorder."
+msgstr "仅在单频道模式下生效。可拖拽排序。"
+
+msgid "Multi Profile Layout"
+msgstr "多频道布局"
+
+msgid "Used ONLY when Multi Profile mode is selected. Group modules by assigning them to the same channel."
+msgstr "仅在多频道模式下生效。把模块分配到相同频道号即可分组。"
+
+msgid "Display Module"
+msgstr "显示模块"
+
+msgid "Module Parameter"
+msgstr "模块参数"
+
+msgid "Duration (s)"
+msgstr "时长 (秒)"
+
+msgid "Channel ID"
+msgstr "频道号"
+
+msgid "Channel "
+msgstr "频道 "
+
+# ==================================
+# 网络设置
+# ==================================
+msgid "Network Settings"
+msgstr "网络设置"
+
+msgid "Network Interface"
+msgstr "网络接口"
+
+msgid "Interface for traffic monitoring (e.g. br-lan)."
+msgstr "用于流量监控的默认接口 (如 br-lan)。"
+
+msgid "WAN IP API"
+msgstr "公网 IP 查询接口"
+
+msgid "Select a preset or enter custom URL."
+msgstr "选择预设或输入自定义地址。"
+
+# ==================================
+# 传感器与天气 / 告警
+# ==================================
+msgid "Sensor & Weather"
+msgstr "传感器与天气"
+
+msgid "Weather Source"
+msgstr "天气数据源"
+
+msgid "City Name"
+msgstr "城市名称"
+
+msgid "City name (Chinese/Pinyin/English) or \"auto\" for IP-based location. Open-Meteo needs a real city NAME, not a numeric code."
+msgstr "城市名 (中文/拼音/英文), 或填 auto 使用 IP 自动定位。注意 Open-Meteo 只认城市名, 不认数字代码。"
+
+msgid "Weather Format"
+msgstr "天气显示样式"
+
+msgid "Simple (Static Icon + Temp)"
+msgstr "精简 (静态图标 + 温度)"
+
+msgid "Full (Rolling Text)"
+msgstr "完整 (滚动全文)"
+
+msgid "Simple mode prevents scrolling and locks position. Full mode rolls long text."
+msgstr "精简模式固定位置不滚动; 完整模式滚动显示全部信息。"
+
+msgid "Seniverse API Key"
+msgstr "心知天气 API 密钥"
+
+msgid "Apply for a free key at seniverse.com. No built-in key anymore."
+msgstr "请到 seniverse.com 免费申请密钥, 不再内置公共密钥。"
+
+msgid "Temp Alert Threshold (°C)"
+msgstr "温度告警阈值 (°C)"
+
+msgid "Blink a warning on screen when the sensor exceeds this temperature. 0 = disabled."
+msgstr "传感器超过该温度时在屏幕上闪烁警示。0 = 关闭。"
+
+msgid "Temp Alert Sensor"
+msgstr "温度告警传感器"
+
+msgid "Alert on WAN Down/Up"
+msgstr "断网/恢复提醒"
+
+msgid "Blink \"NET DOWN\" when internet is lost, show \"NET OK\" when restored."
+msgstr "断网时闪烁 NET DOWN, 恢复时显示 NET OK。"
+
+msgid "Alert on New Device"
+msgstr "新设备接入提醒"
+
+msgid "Show \"NEW xx:xx:xx\" when an unknown device joins the network (ARP)."
+msgstr "有陌生设备接入网络时显示 NEW xx:xx:xx (基于 ARP 表)。"
+
+msgid "Alert on WAN IP Change"
+msgstr "公网 IP 变化提醒"
+
+msgid "Show the new address when the public IP changes (requires WAN IP module in use)."
+msgstr "公网 IP 变化时上屏显示新地址 (需启用公网 IP 模块)。"
+
+# ==================================
+# 自定义内容与拓展 API
+# ==================================
+msgid "Custom Content & APIs"
+msgstr "自定义内容与拓展接口"
+
+msgid "Custom Text (banner)"
+msgstr "自定义文本 (banner)"
+
+msgid "Shown when \"banner\" is in the profile."
+msgstr "频道中使用「自定义文本」模块时显示。"
+
+msgid "Stock API URL (stock)"
+msgstr "股票接口地址 (stock)"
+
+msgid "Shown when \"stock\" is in the profile."
+msgstr "频道中使用「股票行情」模块时显示。"
+
+msgid "HTTP Request URL (http_custom)"
+msgstr "HTTP 请求地址 (http_custom)"
+
+msgid "Shown when \"http_custom\" is in the profile."
+msgstr "频道中使用「HTTP 接口」模块时显示。"
+
+msgid "HTTP Cache Time (s)"
+msgstr "HTTP 缓存时间 (秒)"
+
+msgid "Cache API results to prevent rate limiting."
+msgstr "缓存接口返回结果, 防止请求过于频繁被限流。"
+
+msgid "HTTP Max Length"
+msgstr "HTTP 显示长度上限"
+
+msgid "Max characters to display (defaults to 15)."
+msgstr "最多显示的字符数 (默认 15)。"
+
+# ==================================
+# 硬件 LED 开关
+# ==================================
+msgid "Hardware LED Switches"
+msgstr "硬件状态灯开关"
+
+msgid "Check the box to Turn OFF (Disable) specific status LEDs on the router."
+msgstr "勾选即「关闭」对应的路由器状态指示灯。"
+
+msgid "Disable Clock LED (CPU/Mem)"
+msgstr "关闭时钟灯 (CPU 负载指示)"
+
+msgid "Disable Medal LED (Internet)"
+msgstr "关闭奖牌灯 (联网指示)"
+
+msgid "Disable Upload LED (Arrow Up)"
+msgstr "关闭上传灯 (上箭头)"
+
+msgid "Disable Download LED (Arrow Down)"
+msgstr "关闭下载灯 (下箭头)"
+
+# ==================================
+# 定时休眠
+# ==================================
+msgid "Scheduled Sleep"
+msgstr "定时休眠"
+
+msgid "Enable Scheduled Sleep"
+msgstr "启用定时休眠"
+
+msgid "Screen Off Time"
+msgstr "熄屏时间"
+
+msgid "Screen On Time"
+msgstr "亮屏时间"
+
+msgid "HH:MM format (e.g. 23:00)."
+msgstr "时:分 格式 (如 23:00)。"
+
+msgid "HH:MM format (e.g. 07:00)."
+msgstr "时:分 格式 (如 07:00)。"
+
+# ==================================
+# 自动化与集成
+# ==================================
+msgid "Automation & Integration"
+msgstr "自动化与集成"
+
+msgid "Control Port"
+msgstr "控制接口端口"
+
+msgid "Runtime control interface on 127.0.0.1 (0 = disabled). Usage: echo \"show 10 HELLO\" | nc 127.0.0.1 PORT — commands: next / home / off / wake / toggle / light 0-7 / show SECS TEXT."
+msgstr "运行时控制接口, 仅监听 127.0.0.1 (0 = 关闭)。用法: echo \"show 10 HELLO\" | nc 127.0.0.1 端口。指令: next / home / off / wake / toggle / light 0-7 / show 秒数 文本。"
+
+msgid "MQTT Broker"
+msgstr "MQTT 服务器"
+
+msgid "host[:port]. Leave empty to disable. Received messages show via the \"MQTT Message\" module."
+msgstr "主机[:端口], 留空即关闭。收到的消息通过「MQTT 消息」模块上屏。"
+
+msgid "MQTT Topic"
+msgstr "MQTT 主题"
+
+msgid "MQTT Username"
+msgstr "MQTT 用户名"
+
+msgid "MQTT Password"
+msgstr "MQTT 密码"
+
+# ==================================
+# 服务控制
+# ==================================
+msgid "Service Control"
+msgstr "服务控制"
+
+msgid "Restart Service"
+msgstr "重启服务"
+
+msgid "Restart"
+msgstr "重启"
+
+msgid "Stop Service"
+msgstr "停止服务"
+
+msgid "Stop"
+msgstr "停止"
+
+# ==================================
+# Lua 回退界面遗留文案 (保持兼容)
+# ==================================
+msgid "Base Setting"
+msgstr "基础设置"
+
+msgid "Athena LED"
+msgstr "雅典娜 LED"
+
+msgid "Unknown Error"
+msgstr "未知错误"
+
+msgid "Force restart the process immediately."
+msgstr "立即强制重启进程。"
+
+msgid "Stop the process (Will restart on reboot if Enabled is checked)."
+msgstr "停止进程 (若已勾选启用, 重启路由后会自动拉起)。"
+
+msgid "Select an option or type custom value. Leave empty if none."
+msgstr "选择或手动输入参数值, 无参数可留空。"

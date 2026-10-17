@@ -13,7 +13,7 @@ PKG_LICENSE:=Apache-2.0
 PKG_LICENSE_FILES:=LICENSE
 
 PKG_SOURCE:=athena-led-aarch64-unknown-linux-musl-v$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/unraveloop/JDC-AX6600-Athena-LED-Controller/releases/download/v$(PKG_VERSION)/
+PKG_SOURCE_URL:=https://github.com/guangyin53222/JDC-AX6600-Athena-LED-Controller/releases/download/v$(PKG_VERSION)/
 PKG_HASH:=skip
 
 include $(INCLUDE_DIR)/package.mk
@@ -22,8 +22,8 @@ define Package/$(PKG_NAME)
 	SECTION:=utils
 	CATEGORY:=Utilities
 	TITLE:=JDCloud AX6600 (Athena) LED matrix screen daemon
-	URL:=https://github.com/unraveloop/JDC-AX6600-Athena-LED-Controller
-	DEPENDS:=@(aarch64||arm)
+	URL:=https://github.com/guangyin53222/JDC-AX6600-Athena-LED-Controller
+	DEPENDS:=@aarch64||@arm
 endef
 
 define Package/$(PKG_NAME)/description
@@ -36,6 +36,12 @@ endef
 define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
 	tar xf $(DL_DIR)/$(PKG_SOURCE) -C $(PKG_BUILD_DIR)
+	# 如果 tar.gz 内部有版本子目录，把内容展平到 PKG_BUILD_DIR
+	cd $(PKG_BUILD_DIR) && \
+		SUBDIR=$$(ls -d athena-led-* 2>/dev/null | head -1) && \
+		if [ -n "$$SUBDIR" ] && [ -d "$$SUBDIR" ]; then \
+			cp -r "$$SUBDIR"/* . ; \
+		fi
 endef
 
 # 二进制为预编译产物，无需编译步骤
@@ -52,6 +58,7 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/athena-led $(1)/usr/bin/
 
 	# 2. 物理按键探测脚本 (去掉 .sh 后缀，提升命令逼格)
+	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) ./files/find_button.sh $(1)/usr/bin/find_button
 
 	# 3. init.d 守护脚本
