@@ -1,0 +1,207 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: luci-app-gecoosac\n"
+"PO-Revision-Date: 2026-06-19 00:00+0800\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: Chinese (Simplified Han script)\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Default certificate files are generated when HTTPS starts; custom paths must point to a readable certificate and matching key."
+msgstr "默认证书文件会在 HTTPS 启动时生成；自定义路径必须指向可读取且相互匹配的证书和私钥。"
+
+msgid "Gecoos AC"
+msgstr "集客AC控制器"
+
+msgid "Grant access for luci-app-gecoosac"
+msgstr "授予 luci-app-gecoosac 访问权限"
+
+msgid "Only supports Gecoos AP firmware 7.6 and above."
+msgstr "仅支持集客 AP 7.6 及以上版本固件。"
+
+msgid "Default login password: \"admin\". Change it immediately after first login."
+msgstr "初始登录密码为「admin」，首次登录后请立即修改。"
+
+msgid "Global Settings"
+msgstr "全局设置"
+
+msgid "Enabled AC"
+msgstr "启用集客AC"
+
+msgid "Set interface port"
+msgstr "设置接口端口"
+
+msgid "Single Port Mode"
+msgstr "单端口模式"
+
+msgid "Do not enable the independent management port, only use one port for management."
+msgstr "不开启独立管理端口，只使用一个端口进行管理。"
+
+msgid "Set management port"
+msgstr "设置管理端口"
+
+msgid "Enable HTTPS service"
+msgstr "开启 HTTPS 服务"
+
+msgid "Specify crt certificate file"
+msgstr "指定 crt 证书文件"
+
+msgid "Specify key certificate file"
+msgstr "指定 key 证书文件"
+
+msgid "Upload dir path"
+msgstr "上传目录"
+
+msgid ""
+"Upload AP upgrade firmware here. Use /tmp/gecoosac/upload or /mnt/storage-"
+"name/gecoosac/upload. The /mnt/storage-name directory must already exist "
+"and be root-owned and private."
+msgstr ""
+"AP 升级固件会上传到此目录。请使用 /tmp/gecoosac/upload 或 /mnt/storage-"
+"name/gecoosac/upload。/mnt/storage-name 目录必须已存在、归 root 所有且权限安全。"
+
+msgid "Upload directory must be /tmp/gecoosac/upload or /mnt/storage-name/gecoosac/upload."
+msgstr "上传目录必须是 /tmp/gecoosac/upload 或 /mnt/storage-name/gecoosac/upload。"
+
+msgid "Database dir path"
+msgstr "数据库目录"
+
+msgid "Store the config database under /etc/gecoosac, /tmp/gecoosac, or /var/lib/gecoosac. Do not place it inside the upload directory."
+msgstr "将配置数据库存放在 /etc/gecoosac、/tmp/gecoosac 或 /var/lib/gecoosac 下。不要放在上传目录内。"
+
+msgid "Database directory must be under /etc/gecoosac, /tmp/gecoosac, or /var/lib/gecoosac."
+msgstr "数据库目录必须位于 /etc/gecoosac、/tmp/gecoosac 或 /var/lib/gecoosac 下。"
+
+msgid "Database directory must not be the upload directory or inside it."
+msgstr "数据库目录不能是上传目录，也不能位于上传目录内。"
+
+msgid "PID dir path"
+msgstr "PID 目录"
+
+msgid "Store the AC program pid file under /var/run or /tmp/gecoosac. Do not place it inside the upload directory."
+msgstr "将 AC 程序 PID 文件存放在 /var/run 或 /tmp/gecoosac 下。不要放在上传目录内。"
+
+msgid "PID directory must be under /var/run or /tmp/gecoosac."
+msgstr "PID 目录必须位于 /var/run 或 /tmp/gecoosac 下。"
+
+msgid "PID directory must not be the upload directory or inside it."
+msgstr "PID 目录不能是上传目录，也不能位于上传目录内。"
+
+msgid "Language"
+msgstr "语言"
+
+msgid "Chinese"
+msgstr "中文"
+
+msgid "English"
+msgstr "英文"
+
+msgid "Debug Mode"
+msgstr "调试模式"
+
+msgid "Show IP Tip"
+msgstr "显示 IP 提示"
+
+msgid "Show the IP 6.7.8.9 setup tip when it is not configured."
+msgstr "未配置 6.7.8.9 时显示相关提示信息。"
+
+msgid "Enable Log"
+msgstr "启用日志"
+
+msgid "The GecoosAC service is running."
+msgstr "集客AC控制器 运行中"
+
+msgid "The GecoosAC service is not running."
+msgstr "集客AC控制器 未运行"
+
+msgid "Open the mgmt page"
+msgstr "打开管理页面"
+
+msgid "Clear Upload Directory"
+msgstr "清理上传目录"
+
+msgid "Clear"
+msgstr "清理"
+
+msgid "Only files under the saved Gecoos upload directory will be removed. Save and Apply before clearing a newly edited path."
+msgstr "只会删除已保存的集客 AC 上传目录中的文件。若刚修改路径，请先保存并应用后再清理。"
+
+msgid "Really clear the saved upload directory?"
+msgstr "确定要清理已保存的上传目录吗？"
+
+msgid "Expecting an absolute path"
+msgstr "请输入绝对路径"
+
+msgid "Only Gecoos upload directories can be cleared"
+msgstr "只能清理集客 AC 上传目录"
+
+msgid "Upload directory contains a mount point"
+msgstr "上传目录包含挂载点"
+
+msgid "Upload directory was not cleared"
+msgstr "上传目录未清理"
+
+msgid "Saved upload directory cleared"
+msgstr "已保存的上传目录已清理"
+
+msgid "Unable to remove upload directory contents"
+msgstr "无法删除上传目录内容"
+
+msgid "Port must be an integer between 1 and 65535."
+msgstr "端口必须是 1 到 65535 之间的整数。"
+
+msgid "Interface port and management port must be different."
+msgstr "接口端口和管理端口必须不同。"
+
+msgid "Unable to query service status"
+msgstr "无法查询服务状态"
+
+msgid "Service status unavailable"
+msgstr "服务状态不可用"
+
+msgid "Invalid service status response"
+msgstr "服务状态响应无效"
+
+msgid "Unable to resolve upload directory"
+msgstr "无法解析上传目录"
+
+msgid "Upload directory contains a configured protected path"
+msgstr "上传目录包含已配置的受保护路径"
+
+msgid "Unable to validate configured paths"
+msgstr "无法验证已配置的路径"
+
+msgid "Unable to read Gecoos configuration"
+msgstr "无法读取 Gecoos 配置"
+
+msgid "Gecoos configuration changed during cleanup"
+msgstr "清理期间 Gecoos 配置发生变化"
+
+msgid "Upload directory or its parent is not root-owned and private"
+msgstr "上传目录或其父目录不是 root 所有且为私有目录"
+
+msgid "Unable to prepare upload directory cleanup"
+msgstr "无法准备上传目录清理"
+
+msgid "Unable to validate upload cleanup stage"
+msgstr "无法验证上传目录清理暂存区"
+
+msgid "Upload cleanup stage contains a configured protected path"
+msgstr "上传目录清理暂存区包含已配置的受保护路径"
+
+msgid "Paths under .gecoosac-clear.* are reserved for upload cleanup."
+msgstr ".gecoosac-clear.* 下的路径保留用于上传目录清理。"
+
+msgid "Unable to recreate upload directory"
+msgstr "无法重新创建上传目录"
+
+msgid "Unable to remove upload cleanup stage"
+msgstr "无法删除上传目录清理暂存区"
+
+msgid "Unable to resolve managed path policy"
+msgstr "无法解析受管路径策略"
+
+msgid "Unable to validate /var paths on this system."
+msgstr "无法验证此系统上的 /var 路径。"

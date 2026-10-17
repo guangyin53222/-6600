@@ -1,0 +1,17 @@
+{
+	"luci-app-gecoosac": {
+		"description": "Grant access for luci-app-gecoosac",
+		"read": {
+			"ubus": {
+				"luci.gecoosac": [ "path_policy", "status" ]
+			},
+			"uci": [ "gecoosac" ]
+		},
+		"write": {
+			"ubus": {
+				"luci.gecoosac": [ "clear_upload" ]
+			},
+			"uci": [ "gecoosac" ]
+		}
+	}
+}
