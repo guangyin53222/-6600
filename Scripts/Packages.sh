@@ -44,15 +44,8 @@ UPDATE_PACKAGE() {
 		rm -rf ./$REPO_NAME/
 	elif [[ "$PKG_SPECIAL" == "name" ]]; then
 		mv -f $REPO_NAME $PKG_NAME
-	elif [[ "$PKG_SPECIAL" == "athena" ]]; then
-		# JDCloud AX6600 Athena LED: 仓库含 athena-led + luci-app-athena-led 两个子目录
-		cp -rf ./$REPO_NAME/athena-led ./athena-led 2>/dev/null
-		cp -rf ./$REPO_NAME/luci-app-athena-led ./luci-app-athena-led 2>/dev/null
-		rm -rf ./$REPO_NAME/
-		echo "Athena LED added: athena-led + luci-app-athena-led"
 	fi
 }
-
 
 # ===================== 主题 =====================
 UPDATE_PACKAGE "argon" "sbwml/luci-theme-argon" "openwrt-25.12"
@@ -90,9 +83,6 @@ UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 UPDATE_PACKAGE "timecontrol" "sirpdboy/luci-app-timecontrol" "main"
 UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "axonhub gecoosac sing-box luci-app-homeproxy luci-app-timewol luci-app-wolplus luci-app-wolultra"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
-
-# ===================== JDCloud AX6600 =====================
-UPDATE_PACKAGE "athena-led" "guangyin53222/JDC-AX6600-Athena-LED-Controller" "main" "athena"
 
 
 # ========== 第三方扩展插件 ==========
