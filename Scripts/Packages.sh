@@ -83,7 +83,39 @@ UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 UPDATE_PACKAGE "timecontrol" "sirpdboy/luci-app-timecontrol" "main"
 UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "axonhub gecoosac sing-box luci-app-homeproxy luci-app-timewol luci-app-wolplus luci-app-wolultra"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
+# Athena LED（京东云雅典娜 RE-CS-02 点阵屏） - guangyin53222 增强版
+if package_enabled luci-app-athena-led athena-led; then
+  # 【关键】彻底清理旧版 emortal 路径及 feeds 缓存，防止冲突
+  rm -rf package/emortal/athena-led
+  rm -rf package/emortal/luci-app-athena-led
+  rm -rf feeds/luci/applications/luci-app-athena-led
+  rm -rf feeds/packages/utils/athena-led
+  # 清理可能残留的旧移动路径
+  rm -rf package/athena-led package/luci-app-athena-led
 
+  # 克隆完整仓库到临时目录
+  clone_repository https://github.com/guangyin53222/JDC-AX6600-Athena-LED-Controller main package/JDC-AX6600-Athena-LED-Controller
+
+  # 移动核心驱动 (athena-led)
+  if [ -d package/JDC-AX6600-Athena-LED-Controller/athena-led ]; then
+    mv package/JDC-AX6600-Athena-LED-Controller/athena-led package/athena-led
+  fi
+
+  # 移动 LuCI 应用 (luci-app-athena-led)
+  if [ -d package/JDC-AX6600-Athena-LED-Controller/luci-app-athena-led ]; then
+    mv package/JDC-AX6600-Athena-LED-Controller/luci-app-athena-led package/luci-app-athena-led
+  fi
+
+  # 清理临时目录
+  rm -rf package/JDC-AX6600-Athena-LED-Controller
+
+  # 赋予可执行权限
+  chmod +x \
+    package/athena-led/root/etc/init.d/athena_led \
+    package/athena-led/root/usr/sbin/athena-led \
+    package/luci-app-athena-led/root/etc/init.d/athena_led \
+    package/luci-app-athena-led/root/usr/sbin/athena-led 2>/dev/null || true
+fi
 
 # ========== 第三方扩展插件 ==========
 echo "========================================"
